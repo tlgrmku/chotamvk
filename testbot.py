@@ -4,7 +4,7 @@ import re
 import time
 import os
 
-tgtoken = str(os.envirion.get('TGTOKEN'))
+tgtoken = str(os.environ.get('TGTOKEN'))
     
 def send_mesg_post():
     method = 'https://api.telegram.org/bot' + tgtoken + '/sendMessage'
