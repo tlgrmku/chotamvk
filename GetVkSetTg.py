@@ -17,10 +17,10 @@ def get_newsfeed(): #запрос данных с vk
     return newsfeed
 
 def get_reklama(newsfeed): #проверка поста на рекламу
-    reklama = str(newsfeed['response']['items'][0]['marked_as_ads'])
-    if reklama == '1':
+    reklama = newsfeed['response']['items'][0]['marked_as_ads']
+    if reklama == 1:
         return '1'
-    elif reklama == '0':
+    elif reklama == 0:
         return '0'
         
 def get_repost(newsfeed): #проверка поста на репост
