@@ -6,6 +6,8 @@ import time
 
 vktoken = str(os.environ.get('VKTOKEN'))
 tgtoken = str(os.environ.get('TGTOKEN'))
+chatforbot = str(os.environ.get('CHATFORBOT'))
+mygroup = str(os.environ.get('MYGROUP'))
 
 def get_newsfeed(): #запрос данных с vk
     newsfeed = requests.get('https://api.vk.com/method/newsfeed.get?', params={
@@ -154,12 +156,12 @@ def send_mesg_post(url_post, text): #отправка сообщения
                     },
                     {
                            'text': 'Обсудить',
-                           'url': 'tg://resolve?domain=kur_talk'
+                           'url': mygroup
                     }]
             ]
     }
     mesg_post = requests.post(method, data={
-         'chat_id': '@rtttew',
+         'chat_id': chatforbot,
          'text': text,
          'parse_mode': 'HTML',
          'disable_notification': 1,
@@ -179,12 +181,12 @@ def send_photo_post(url_post, photo, text): #отправка сообщения
                     },
                     {
                            'text': 'Обсудить',
-                           'url': 'tg://resolve?domain=kur_talk'
+                           'url': mygroup
                     }]
             ]
     }
     photo_post = requests.post(method, data={
-         'chat_id': '@rtttew',
+         'chat_id': chatforbot,
          'photo': photo,
          'caption': text,
          'parse_mode': 'HTML',
@@ -205,12 +207,12 @@ def send_anim_post(url_post, anim, text): #отправка сообщения �
                     },
                     {
                            'text': 'Обсудить',
-                           'url': 'tg://resolve?domain=kur_talk'
+                           'url': mygroup
                     }]
             ]
     }
     anim_post = requests.post(method, data={
-         'chat_id': '@rtttew',
+         'chat_id': chatforbot,
          'animation': anim,
          'caption': text,
          'parse_mode': 'HTML',
@@ -231,12 +233,12 @@ def send_audio_post(url_post, audiourl, text): #отправка сообщен�
                     },
                     {
                            'text': 'Обсудить',
-                           'url': 'tg://resolve?domain=kur_talk'
+                           'url': mygroup
                     }]
             ]
     }
     audio_post = requests.post(method, data={
-         'chat_id': '@rtttew',
+         'chat_id': chatforbot,
          'audio': audiourl,
          'caption': text,
          'parse_mode': 'HTML',
