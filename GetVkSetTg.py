@@ -18,8 +18,8 @@ def get_newsfeed(): #запрос данных с vk
 
 def reklama(newsfeed): #проверка поста на рекламу
     try:
-        reklama = newsfeed['response']['items'][0]['marked_as_ads']
-        if reklama == 1:
+        reklama = str(newsfeed['response']['items'][0]['marked_as_ads'])
+        if reklama == '1':
             return True
         else:
             return False
