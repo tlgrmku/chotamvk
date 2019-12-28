@@ -25,7 +25,7 @@ def get_reklama(newsfeed): #проверка поста на рекламу
         print('Ложь')
         return '0'
         
-def repost(newsfeed): #проверка поста на репост
+def get_repost(newsfeed): #проверка поста на репост
     try:
         repost = str(newsfeed['response']['items'][0]['copy_history'])
         return True
@@ -318,13 +318,13 @@ while True:
             print('Реклама')
             pass
         else:
-            repost = repost(newsfeed) #проверка поста на репост
+            repost = get_repost(newsfeed) #проверка поста на репост
             if repost == True:
                 print('Репост')
                 pass
             else:
-                get_post = get_post(newsfeed) #получение поста из vk
-                print(get_post)
+                g_post = get_post(newsfeed) #получение поста из vk
+                print(g_post)
     
     time.sleep(5)
 
