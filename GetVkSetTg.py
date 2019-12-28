@@ -20,10 +20,10 @@ def reklama(newsfeed): #проверка поста на рекламу
     reklama = str(newsfeed['response']['items'][0]['marked_as_ads'])
     if reklama == '1':
         print('Правда')
-        return True
+        return '1'
     elif reklama == '0':
         print('Ложь')
-        return False
+        return '0'
         
 def repost(newsfeed): #проверка поста на репост
     try:
@@ -314,7 +314,7 @@ while True:
         pass
     else:
         reklama = reklama(newsfeed) #проверка поста на рекламу
-        if reklama == True:
+        if reklama == '1':
             print('Реклама')
             pass
         else:
