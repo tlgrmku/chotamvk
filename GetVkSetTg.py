@@ -19,10 +19,8 @@ def get_newsfeed(): #запрос данных с vk
 def get_reklama(newsfeed): #проверка поста на рекламу
     reklama = str(newsfeed['response']['items'][0]['marked_as_ads'])
     if reklama == '1':
-        print('Правда')
         return '1'
     elif reklama == '0':
-        print('Ложь')
         return '0'
         
 def get_repost(newsfeed): #проверка поста на репост
