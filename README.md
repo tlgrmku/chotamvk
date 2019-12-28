@@ -24,11 +24,11 @@
 	- Аккаунт на Heroku.
 
 ### Ключи в Heroku:
-	VKTOKEN это токен Вконтакте
-	TGTOKEN это токен Telegram-бота
-	CHATFORBOT это id или username Telegram-группы/канала/человека куда бот будет отправлять посты
+ - VKTOKEN это токен Вконтакте
+ - TGTOKEN это токен Telegram-бота
+ - CHATFORBOT это id или username Telegram-группы/канала/человека куда бот будет отправлять посты
 	*Пример: @chotamvk*
-	MYGROUP это id или username Telegram-группы/канала/человека для кнопки "Обсудить"
+ - MYGROUP это id или username Telegram-группы/канала/человека для кнопки "Обсудить"
 	*Пример: tg://resolve?domain=chotamvk*
 	
 Автор tlgrmku.
