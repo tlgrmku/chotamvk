@@ -17,15 +17,13 @@ def get_newsfeed(): #запрос данных с vk
     return newsfeed
 
 def reklama(newsfeed): #проверка поста на рекламу
-    try:
-        reklama = str(newsfeed['response']['items'][0]['marked_as_ads'])
-        if reklama == '1':
-            return True
-        else:
-            return False
-    except:
-        print('Except сработал')
-        pass
+    reklama = str(newsfeed['response']['items'][0]['marked_as_ads'])
+    if reklama == '1':
+        print('Правда')
+        return True
+    elif reklama == '0':
+        print('Ложь')
+        return False
         
 def repost(newsfeed): #проверка поста на репост
     try:
