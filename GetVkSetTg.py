@@ -16,7 +16,7 @@ def get_newsfeed(): #запрос данных с vk
         }).json()
     return newsfeed
 
-def reklama(newsfeed): #проверка поста на рекламу
+def get_reklama(newsfeed): #проверка поста на рекламу
     reklama = str(newsfeed['response']['items'][0]['marked_as_ads'])
     if reklama == '1':
         print('Правда')
@@ -313,7 +313,7 @@ while True:
         print('Такой пост уже был')
         pass
     else:
-        reklama = reklama(newsfeed) #проверка поста на рекламу
+        reklama = get_reklama(newsfeed) #проверка поста на рекламу
         if reklama == '1':
             print('Реклама')
             pass
