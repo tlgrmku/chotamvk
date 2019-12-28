@@ -24,6 +24,7 @@ def reklama(newsfeed): #проверка поста на рекламу
         else:
             return False
     except:
+        print('Except сработал')
         pass
         
 def repost(newsfeed): #проверка поста на репост
