@@ -156,7 +156,7 @@ def send_mesg_post(url_post, text): #отправка сообщения
                     },
                     {
                            'text': 'Обсудить',
-                           'url': mygroup
+                           'url': f'tg://resolve?domain={mygroup}'
                     }]
             ]
     }
@@ -181,7 +181,7 @@ def send_photo_post(url_post, photo, text): #отправка сообщения
                     },
                     {
                            'text': 'Обсудить',
-                           'url': mygroup
+                           'url': f'tg://resolve?domain={mygroup}'
                     }]
             ]
     }
@@ -207,7 +207,7 @@ def send_anim_post(url_post, anim, text): #отправка сообщения �
                     },
                     {
                            'text': 'Обсудить',
-                           'url': mygroup
+                           'url': f'tg://resolve?domain={mygroup}'
                     }]
             ]
     }
@@ -233,7 +233,7 @@ def send_audio_post(url_post, audiourl, text): #отправка сообщен�
                     },
                     {
                            'text': 'Обсудить',
-                           'url': mygroup
+                           'url': f'tg://resolve?domain={mygroup}'
                     }]
             ]
     }
