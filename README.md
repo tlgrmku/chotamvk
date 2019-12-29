@@ -37,7 +37,7 @@
 	CHATFORBOT это id или username Telegram-группы/канала/человека куда бот будет отправлять посты
 	*Пример: @chotamvk*
 	MYGROUP это id или username Telegram-группы/канала/человека для кнопки "Обсудить"
-	*Пример: tg://resolve?domain=chotamvk*
+	*Пример: chotamvk*
 	
 Автор tlgrmku.
 
