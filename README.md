@@ -15,6 +15,9 @@
  - Бот не использует модули других ботов. Используются только модули requests и стандартные json, re, os, time
  - Бот не копирует посты с репостами и с пометкой "Реклама"
  - Бот не копирует опросы. Но копирует вопрос опроса
+ 
+### Пример поста Вконтакте и в Telegram:
+![Пример поста Вконтакте и в Telegram](https://github.com/tlgrmku/chotamvk/raw/master/Image.PNG)
 
 ### Как использовать бота самому?
  - Для начала Вам нужны:
@@ -40,9 +43,9 @@
 	MYGROUP это username Telegram-группы для кнопки "Обсудить"
 	*Пример: chotamvk или оставить пустым(кнопка будет не активна)*
 	
-### Пример поста Вконтакте и в Telegram:
-![Пример поста Вконтакте и в Telegram](https://github.com/tlgrmku/chotamvk/raw/master/Image.PNG)
-	
+### Пример KEY и VALUE в Heroku:
+![Пример KEY и VALUE](https://github.com/tlgrmku/chotamvk/raw/master/Image2.png)
+
 Автор tlgrmku.
 
 Telegram канал где живёт бот: https://t.me/chotamvk
