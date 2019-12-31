@@ -40,6 +40,8 @@
 	MYGROUP это username Telegram-группы для кнопки "Обсудить"
 	*Пример: chotamvk или оставить пустым(кнопка будет не активна)*
 	
+![Пример поста Вконтакте и в Telegram](https://github.com/tlgrmku/chotamvk/raw/master/Image.PNG)
+	
 Автор tlgrmku.
 
 Telegram канал где живёт бот: https://t.me/chotamvk
