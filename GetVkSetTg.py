@@ -329,6 +329,6 @@ while True:
                 g_post = get_post(newsfeed) #получение поста из vk
                 print(g_post)
     
-    time.sleep(5)
+    time.sleep(3)
 
 #
