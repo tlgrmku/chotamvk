@@ -7,6 +7,7 @@ import time
 vktoken = str(os.environ.get('VKTOKEN'))
 tgtoken = str(os.environ.get('TGTOKEN'))
 chatforbot = str(os.environ.get('CHATFORBOT'))
+stime = int(os.environ.get('STIME'))
 
 def get_newsfeed(): #запрос данных с vk
     newsfeed = requests.get('https://api.vk.com/method/newsfeed.get?', params={
@@ -312,6 +313,6 @@ while True:
                 g_post = get_post(newsfeed) #получение поста из vk
                 print(g_post)
     
-    time.sleep(4)
+    time.sleep(stime)
 
 #
