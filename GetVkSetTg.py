@@ -293,7 +293,7 @@ def get_post(newsfeed): #получение поста и всех прикре�
         send_photo_post(url_post, photo, text)
         return url_post, name, text_post, photo
 
-hours = [19, 20, 21, 22, 23, 0, 1]
+hours = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
 print(time.localtime()[3])
 
 while True:
