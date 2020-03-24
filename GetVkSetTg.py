@@ -293,25 +293,30 @@ def get_post(newsfeed): #получение поста и всех прикре�
         send_photo_post(url_post, photo, text)
         return url_post, name, text_post, photo
 
+hours = [19, 20, 21, 22, 23, 0, 1]
+
 while True:
-    newsfeed = get_newsfeed() #запрос данных с vk
-    fresh = get_fresh_post(newsfeed) #проверка поста на свежесть
-    if fresh == True:
-        print('Такой пост уже был')
-        pass
-    else:
-        reklama = get_reklama(newsfeed) #проверка поста на рекламу
-        if reklama == '1':
-            print('Реклама')
+    if time.localtime()[3] in hours:
+        newsfeed = get_newsfeed() #запрос данных с vk
+        fresh = get_fresh_post(newsfeed) #проверка поста на свежесть
+        if fresh == True:
+            print('Такой пост уже был')
             pass
         else:
-            repost = get_repost(newsfeed) #проверка поста на репост
-            if repost == True:
-                print('Репост')
+            reklama = get_reklama(newsfeed) #проверка поста на рекламу
+            if reklama == '1':
+                print('Реклама')
                 pass
             else:
-                g_post = get_post(newsfeed) #получение поста из vk
-                print(g_post)
+                repost = get_repost(newsfeed) #проверка поста на репост
+                if repost == True:
+                    print('Репост')
+                    pass
+                else:
+                    g_post = get_post(newsfeed) #получение поста из vk
+                    print(g_post)
+    else:
+        print('Бот спит')
     
     time.sleep(stime)
 
