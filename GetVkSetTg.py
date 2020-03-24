@@ -294,6 +294,7 @@ def get_post(newsfeed): #получение поста и всех прикре�
         return url_post, name, text_post, photo
 
 hours = [19, 20, 21, 22, 23, 0, 1]
+print(time.localtime()[3])
 
 while True:
     if time.localtime()[3] in hours:
