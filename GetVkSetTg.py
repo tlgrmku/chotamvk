@@ -318,7 +318,7 @@ while True:
                     print(g_post)
     else:
         print('Бот спит')
-        stime = 3600
+        stime = 60
     
     time.sleep(stime)
 
