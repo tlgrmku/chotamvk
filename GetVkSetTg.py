@@ -297,6 +297,7 @@ hours = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
 
 while True:
     if time.localtime()[3] in hours:
+        stime = int(os.environ.get('STIME'))
         newsfeed = get_newsfeed() #запрос данных с vk
         fresh = get_fresh_post(newsfeed) #проверка поста на свежесть
         if fresh == True:
@@ -317,6 +318,7 @@ while True:
                     print(g_post)
     else:
         print('Бот спит')
+        stime = 3600
     
     time.sleep(stime)
 
