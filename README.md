@@ -44,6 +44,7 @@
 		Пример: @chotamvk или -123456789012345 или 123456789
 	MYGROUP это username Telegram-группы для кнопки "Обсудить" (только для GetVkSetTgG.py)
 		Пример: chotamvk или оставить пустым(кнопка будет не активна)
+	STIME это время в секундах через которое отправляются запросы
 	
 ### Пример KEY и VALUE в Heroku:
 ![Пример KEY и VALUE](https://github.com/tlgrmku/chotamvk/raw/master/Image2.png)
