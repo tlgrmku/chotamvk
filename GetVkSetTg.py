@@ -3,20 +3,31 @@ import json
 import re
 import os
 import time
+import random
 
 vktoken = str(os.environ.get('VKTOKEN'))
+vktoken2 = str(os.environ.get('VKTOKEN2'))
 tgtoken = str(os.environ.get('TGTOKEN'))
 chatforbot = str(os.environ.get('CHATFORBOT'))
 stime = int(os.environ.get('STIME'))
 
 def get_newsfeed(): #запрос данных с vk
-    newsfeed = requests.get('https://api.vk.com/method/newsfeed.get?', params={
-        'access_token': vktoken,
-        'filters': 'post',
-        'v': '5.103',
-        'count': '1'
-        }).json()
-    return newsfeed
+    if random.randint(0, 1) == 0:
+        newsfeed = requests.get('https://api.vk.com/method/newsfeed.get?', params={
+            'access_token': vktoken,
+            'filters': 'post',
+            'v': '5.103',
+            'count': '1'
+            }).json()
+        return newsfeed
+    else:
+        newsfeed = requests.get('https://api.vk.com/method/newsfeed.get?', params={
+            'access_token': vktoken2,
+            'filters': 'post',
+            'v': '5.103',
+            'count': '1'
+            }).json()
+        return newsfeed
 
 def get_reklama(newsfeed): #проверка поста на рекламу
     try:
@@ -293,7 +304,7 @@ def get_post(newsfeed): #получение поста и всех прикре�
         send_photo_post(url_post, photo, text)
         return url_post, name, text_post, photo
 
-hours = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
+hours = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
 
 while True:
     if time.localtime()[3] in hours:
