@@ -300,7 +300,7 @@ def get_post(newsfeed): #получение поста и всех прикре�
             send_mesg_post(url_post, text)
             return url_post, name, text_post, video
     else:
-        text = name + '\n' + text_post[0:990] + '\n'
+        text = name + '\n' + text_post[0:490] + '\n'
         send_photo_post(url_post, photo, text)
         return url_post, name, text_post, photo
 
