@@ -198,7 +198,8 @@ def send_photo_post(url_post, photo, text): #отправка сообщения
          })
 
     if photo_post.status_code != 200:
-        raise Exception('send_photo_post')
+        print('Опять что-то пошло не так в send_photo_post')
+        #raise Exception('send_photo_post')
     
 def send_anim_post(url_post, anim, text): #отправка сообщения с gif
     method = 'https://api.telegram.org/bot' + tgtoken + '/sendAnimation'
