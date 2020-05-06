@@ -78,7 +78,7 @@ def get_attach_photo(newsfeed): #получение фотографии из п
         for p in array_photo_post:
             if p['width'] == int(width):
                 photo_post = p['url']
-        return photo_post
+                return photo_post
     except:
         return 'Нет фото'
     
@@ -301,9 +301,9 @@ def get_post(newsfeed): #получение поста и всех прикре�
             send_mesg_post(url_post, text)
             return url_post, name, text_post, video
     else:
-        text = name + '\n' + text_post[0:990] + '\n'
+        text = name + '\n' + text_post[0:800] + '\n'
         send_photo_post(url_post, photo, text)
-        return url_post, name, text_post, photo
+        return url_post, name, text, photo
 
 hours = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
 
