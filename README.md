@@ -16,6 +16,11 @@
  - Бот работает днём в указанное время с (STARTHOUR) по (ENDHOUR) часов.
  - Бот использует два (VKTOKEN, VKTOKEN2) токена Вконтакте.
 
+
+>Для периода с 07:00 до 01:00 (UTC+5) нужно выставить 2 и 19
+
+>Можно использовать один токен указав его в (VKTOKEN) и (VKTOKEN2)
+
 ### Пример поста Вконтакте и в Telegram:
 ![Пример поста Вконтакте и в Telegram](https://github.com/tlgrmku/chotamvk/raw/master/Image.PNG)
 
@@ -47,5 +52,5 @@
 ### Пример KEY и VALUE в Heroku:
 ![Пример KEY и VALUE](https://github.com/tlgrmku/chotamvk/raw/master/Image2.png)
 
-Telegram канал где живёт бот: https://t.me/chotamvk
-Telegram автора бота: https://t.me/tlgrmku
+> Telegram канал где живёт бот: https://t.me/chotamvk
+ > Telegram автора бота: https://t.me/tlgrmku
