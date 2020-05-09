@@ -53,4 +53,5 @@
 ![Пример KEY и VALUE](https://github.com/tlgrmku/chotamvk/raw/master/Image2.png)
 
 > Telegram канал где живёт бот: https://t.me/chotamvk
- > Telegram автора бота: https://t.me/tlgrmku
+
+> Telegram автора бота: https://t.me/tlgrmku
