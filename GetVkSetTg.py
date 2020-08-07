@@ -247,6 +247,7 @@ def get_attach(newsfeed):
                 pass
 
 #----------------------------------------------------------------------------------------------
+print(requests.get('https://wikipedia.org/').headers['X-Client-IP'])
 hours = list(range(starthour, (endhour + 1)))
 
 while True:
